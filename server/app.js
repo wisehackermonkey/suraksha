@@ -4,13 +4,13 @@
 require('dotenv').config();
 
 const accountSid = 'AC7dc40a462f2b77c470bf05603bca1963';
-const authToken = process.env.MYAPIKEY;
+const authToken = "API_KEY";
 const client = require('twilio')(accountSid, authToken);
 
 client.messages
   .create({
-     body: 'This is the ship that made the Kessel Run in fourteen parsecs?',
-     from: '+15017122661',
-     to: '+15558675310'
+     body: 'Hi this is oran from the server!',
+     from: '+12106721558',
+     to: "+1XXX XXX XXXX"//'+17074946135'
    })
   .then(message => console.log(message.sid));
