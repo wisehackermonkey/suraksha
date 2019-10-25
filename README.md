@@ -22,3 +22,12 @@ Maintaining a simple/cohesive user flow while meeting the addressing the most si
 
 Built using
 Javascript, node.js, and twilio api
+
+Docker how to run
+```bash
+docker build -t sura-server -f Dockerfile .
+docker run -i -p 80:8080 -t sura-server
+
+in browser go to http://localhost/
+
+```
