@@ -1,15 +1,10 @@
 {
   "users": [
-    {
-      "phone": "+17074946135",
-      "location": "Del",
-      "intro": "",
-      "help": ""
-    }
+    
   ],
   "pages": {
     "welcome": {
-      "text": "Welcome to Suraksha! We are a peer-to-peer support network.  For more information, type 0. अलग भाषा के लिए, 1 दबाएँ ",
+      "text": "Welcome to Suraksha! We are a peer-to-peer support network. For more information, type 0. अलग भाषा के लिए, 1 दबाएँ ",
       "type": "select",
       "links": [
         "location",
@@ -25,7 +20,7 @@
       ]
     },
     "description": {
-      "text": "Please provide a short description about yourself and your request. Keep it to 300 characters, 0) next",
+      "text": "Please tell us a little about yourself and what we can help you with:",
       "type": "input",
       "links": [
         "sent",
@@ -33,7 +28,15 @@
       ]
     },
     "sent": {
-      "text": "Thanks! Your request has been sent. We'll send you an update once someone responds to your request. In the meantime, here are some resources to access: 0) next",
+      "text": "Thanks! Your request has been sent. We'll send you an update once someone responds to your request. In the meantime, here are some resources to access: ",
+      "type": "select",
+      "links": [
+        "recieved",
+        "welcome"
+      ]
+    },
+    "recieved": {
+      "text": "Your request has been accepted by a Suraksha fellow! Please contact the following number to get in touch with her: 707-494-6135",
       "type": "select",
       "links": [
         "welcome"
