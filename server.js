@@ -50,7 +50,7 @@ app.post('/sms', (req, res) => {
             twiml.message(get_page_text(phone))
 
             if(current == "sent"){
-                twiml.message("Your request has been accepted by a Suraksha fellow! Please contact the following number to get in touch with her: 707-494-6135")
+                twiml.message("Your request has been accepted by a Suraksha fellow! Please contact the following number to get in touch with her: 707-494-6134")
 
             }
         }
@@ -135,6 +135,5 @@ const get_page_type = (phone_num) =>{
                     .find({ phone: phone_num })
                     .get("page_name")
                     .value() 
-    return  db.get(`pages.${page_name}.type`).value() 
-
+    return  db.get(`pages.${page_name}.type`).value()
 }
