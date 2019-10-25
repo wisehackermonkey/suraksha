@@ -1,5 +1,7 @@
 //suraksha server by wisehackermonkey
+//20191024 
 //business logic for interacting with sms users
+
 
 
 const http = require('http');
@@ -14,13 +16,12 @@ const FileSync = require('lowdb/adapters/FileSync');
 const adapter = new FileSync('db.json')
 const db = low(adapter)
 
-let s = 0
-
-const PORT = 80
+let PORT =  process.env.PORT || 8080
 const app = express();
 
+console.log("Suraksha Server started:\n")
 app.use(bodyParser.urlencoded({ extended: false }));
-app.post('/sms', (req, res) => {
+app.post('/', (req, res) => {
 
     const twiml = new MessagingResponse();
     const phone = req.body.From
@@ -77,7 +78,7 @@ app.post('/sms', (req, res) => {
         }else{
             console.log("page_name is not set")
             twiml.message("Thanks! Your request has been sent. We'll send you an update once someone responds to your request.")
-            twiml.message("Your request has been accepted by a Suraksha fellow! Please contact the following number to get in touch with her: 707-494-6135")
+            twiml.message("Your request has been accepted by a Suraksha fellow! Please contact the following number to get in touch with her: 707-494-6134")
 
         }
 
@@ -113,7 +114,7 @@ app.post('/sms', (req, res) => {
 });
 
 http.createServer(app).listen(PORT, () => {
-    console.log(`Express server listening on port ${PORT}`);
+    console.log(`Suraksha server listening on port ${PORT}`);
 });
  
 const get_page_text = (phone_num) =>{
