@@ -80,7 +80,7 @@ app.post('/sms', (req, res) => {
         }else{
             console.log("page_name is not set")
             twiml.message("Thanks! Your request has been sent. We'll send you an update once someone responds to your request.")
-            twiml.message("Your request has been accepted by a Suraksha fellow! Please contact the following number to get in touch with her: 707-494-6135")
+            twiml.message("Your request has been accepted by a Suraksha fellow! Please contact the following number to get in touch with her: 707-494-6134")
 
         }
 
