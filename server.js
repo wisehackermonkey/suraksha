@@ -19,7 +19,7 @@ const db = low(adapter)
 let PORT =  process.env.PORT || 8080
 const app = express();
 
-console.log("Suraksha Server started:\n\n")
+console.log("Suraksha Server started:\n")
 app.use(bodyParser.urlencoded({ extended: false }));
 app.post('/', (req, res) => {
 

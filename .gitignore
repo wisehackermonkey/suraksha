@@ -62,3 +62,5 @@ secrets.json
 secret.env
 # next.js build output
 .next
+
+old/app.js
