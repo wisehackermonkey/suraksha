@@ -25,6 +25,16 @@ Javascript, node.js, and twilio api
 
 Docker how to run
 ```bash
+
+https://github.com/CloudNativeJS/docker
+https://www.lynda.com/Node-js-tutorials/Liveness-readiness-endpoints/808675/2228137-4.html
+https://helm.sh/docs/using_helm/#installing-helm
+https://chocolatey.org/install
+https://hub.helm.sh/charts?q=database
+https://github.com/CloudNativeJS/helm
+
+https://blog.machinebox.io/deploy-machine-box-in-digital-ocean-385265fbeafd
+
 docker build -t sura-server -f Dockerfile .
 docker run -i -p 80:8080 -t sura-server
 
@@ -101,4 +111,5 @@ docker run -i -p 80:8080 -t wisehackermonkey/suraksha:1.0.0
 docker run -d -p 80:8080 -t wisehackermonkey/suraksha:1.0.0
 http://localhost:31322/ 
 http://159.203.87.52/
+
 ```
