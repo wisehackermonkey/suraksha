@@ -64,6 +64,19 @@ docker build -t sura-server-run -f Dockerfile-run ./
 docker run -i -p 80:8080 -t sura-server-run
 
 
+
+Install for Raspberry pi
+docker pull wisehackermonkey/suraksha:1.0.0-rpi
+docker run -i --user 1001 -p 80:8080 -t wisehackermonkey/suraksha:1.0.0-rpi
+NOTE 
+If you get the error
+"docker: Error response from daemon: linux spec user: unable to find user node: no matching entries in passwd file."
+RUN --user 1001 fixes the error
+docker run -i --user 1001 -p 80:8080 -t wisehackermonkey/suraksha:1.0.0-rpi
+
+
+
+--------Build notes------
 docker files
 wget https://raw.githubusercontent.com/CloudNativeJS/docker/master/
 
