@@ -122,6 +122,9 @@ windows only
 run on server 
 docker run -i -p 80:8080 -t wisehackermonkey/suraksha:1.0.0
 docker run -d -p 80:8080 -t wisehackermonkey/suraksha:1.0.0
+or run forever
+docker run -d --restart unless-stopped -p 80:8080 -t wisehackermonkey/suraksha:1.0.0
+
 http://localhost:31322/ 
 http://159.203.87.52/
 
